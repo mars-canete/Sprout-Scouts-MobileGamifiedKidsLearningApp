@@ -4,8 +4,7 @@ A mobile gamified learning app designed to make education
 fun and engaging for children through interactive gameplay.
 
 ## Demo
-[Watch Demo]([https://youtube.com/your-video-link](https://drive.google.com/drive/folders/1_Qf7Y6kIikv46yVrT1z_fSiwclzCskW_?usp=sharing))
-
+[Watch Demo](https://drive.google.com/file/d/1jAZeaiWdi6elIewIDA-bCpzNy3NU1ipU/view?usp=sharing)
 
 ## About
 
