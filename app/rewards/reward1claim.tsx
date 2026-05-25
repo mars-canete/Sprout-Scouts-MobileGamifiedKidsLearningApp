@@ -20,7 +20,7 @@ export default function Reward1Claim() {
   const flashOpacity = useSharedValue(0)
   const flashStyle = useAnimatedStyle(() => ({ opacity: flashOpacity.value }))
 
-  // plays once, not looped
+  // plays once
   const claimPlayer = useVideoPlayer(require('@/assets/images/openchest.mp4'), (p) => {
     p.loop = false; p.muted = false
   })
@@ -34,7 +34,7 @@ export default function Reward1Claim() {
   }, [])
 
   useEffect(() => {
-    // fade in from black, matching the puzzle screen's fade out
+    // fade in from black
     screenOpacity.value = withTiming(1, { duration: 300 })
     playSound('chestSound')
     claimPlayer.play()
@@ -43,7 +43,7 @@ export default function Reward1Claim() {
       if (hasNavigated.current) return
       hasNavigated.current = true
       setShowFlash(true)
-      // fade to black and navigate; no fade back out
+      // fade to black and navigate
       flashOpacity.value = withTiming(1, { duration: 400 })
       setTimeout(() => router.replace('/rewards/reward1board'), 400)
     }
