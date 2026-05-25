@@ -261,7 +261,7 @@ export default function LevelSelect() {
 
         </View>
 
-        {/* habitat navigation — arrows overlap the nav image intentionally */}
+        {/* habitat navigation*/}
         <View style={styles.navRow} pointerEvents="box-none">
 
           <TouchableOpacity
