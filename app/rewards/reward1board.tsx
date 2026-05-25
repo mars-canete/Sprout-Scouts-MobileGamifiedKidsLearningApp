@@ -25,7 +25,7 @@ export default function Reward1Board() {
     } catch (e) {}
   }, [])
 
-  // start music, then play a greeting sound after a short delay
+  // start music, then play a greeting sound 
   useEffect(() => {
     startMusic('rewardsMusic')
     const t = setTimeout(() => playSound('greetJob'), 2000)
@@ -41,7 +41,7 @@ export default function Reward1Board() {
       <View style={{ flex: 1, backgroundColor: 'black' }}>
         <VideoView player={rewardVideoPlayer} style={StyleSheet.absoluteFillObject} contentFit="cover" nativeControls={false} />
 
-        {/* one-shot confetti overlay, non-interactive */}
+        {/* one-shot confetti overlay */}
         <ExpoImage
           source={require('@/assets/images/confetti.webp')}
           style={[StyleSheet.absoluteFillObject, { zIndex: 10, elevation: 10 }]}
