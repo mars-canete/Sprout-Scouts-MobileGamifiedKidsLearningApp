@@ -25,7 +25,7 @@ export default function Home() {
     p.muted = false
   })
 
-  // looping muted background for the home screen
+  // looping muted 
   const bgPlayer = useVideoPlayer(require('@/assets/images/home/Frontbg1.mp4'), (p) => {
     p.loop = true
     p.muted = true
