@@ -12,7 +12,7 @@ import Animated, {
 } from 'react-native-reanimated'
 import { Asset } from 'expo-asset'
 
-// gem id → reward image
+// gem id
 const GEMS = [
   { id: 0, reward: require('@/assets/images/leaf.png') },
   { id: 1, reward: require('@/assets/images/key.png') },
@@ -20,7 +20,7 @@ const GEMS = [
 ]
 
 type GemState = 'idle' | 'cracking' | 'cracked'
-// matches the crack animation length
+// match the crack animation length
 const GEM_CRACK_DURATION = 5900
 
 
@@ -49,7 +49,7 @@ const screenStyle = useAnimatedStyle(() => ({ opacity: screenOpacity.value }))
     p.loop = true; p.muted = true; p.play()
   })
 
-  // pre-load so it's ready on first tap
+  // pre-load 
   useEffect(() => {
   Asset.loadAsync(require('@/assets/images/crackanimation.webp'))
 }, [])
@@ -204,7 +204,7 @@ function GemItem({ index, state, reward, onPress, disabled }: {
           contentFit="contain"
         />
 
-        {/* one-shot crack animation, only mounted while active */}
+        {/* one-shot crack animation */}
         {state === 'cracking' && (
        <ExpoImage
   key={`crack-${index}`}
